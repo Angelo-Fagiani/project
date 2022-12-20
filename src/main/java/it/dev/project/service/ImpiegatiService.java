@@ -63,4 +63,8 @@ public class ImpiegatiService {
             throw new Exception("Impiegato non trovato");
         }
     }*/
+
+    public Impiegati updateImpiegato(Impiegati impiegati, Long matricola){
+        return impiegatiRepository.save(impiegati);
+    }
 }

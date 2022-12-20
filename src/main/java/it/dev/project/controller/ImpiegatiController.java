@@ -57,7 +57,12 @@ public class ImpiegatiController {
         return new ResponseEntity<>(imp, HttpStatus.OK);
     }
 
-    
+    @PatchMapping("/{matricola}")
+    public ResponseEntity<?> updateImpiegato(@RequestBody Impiegati impiegati, @PathVariable Long matricola) {
+        Impiegati imp = impiegatiService.updateImpiegato(impiegati, matricola);
+        return new ResponseEntity<>(imp, HttpStatus.OK);
+    }
+
 
 }
 
